@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  accelerate: true
+
+  tasks:
+
+  - name: some task
+    command: echo {{ item }}
+    with_items:
+    - foo
+    - bar
+    - baz
